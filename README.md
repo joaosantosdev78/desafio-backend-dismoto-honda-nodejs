@@ -57,10 +57,9 @@ HOST=localhost
 PORT=8080
 ```
 
-6. Inicie o servidor em modo de desenvolvimento:
+6. Inicie o servidor:
 
-bash
-```
+```bash
 npm start
 ```
 * O servidor estará disponível em  ``http://localhost:<PORTA>/``
