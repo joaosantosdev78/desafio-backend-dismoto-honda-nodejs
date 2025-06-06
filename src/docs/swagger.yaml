@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info:
+  title: Desafio Backend Dismoto Honda
+  description: Este projeto consiste no desenvolvimento de uma API RESTful utilizando Node.js e Express.js. A API foi projetada para atender aos requisitos do desafio técnico proposto pela Dismoto Honda, focando em boas práticas de desenvolvimento backend.
+  version: "1.0.0"
+
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+      required:
+        - name
+        - description
+        - price
+
+paths:
+  /produtos:
+    get:
+      tags:
+        - Produto
+      summary: Retorna todos os produtos
+      responses:
+        "200":
+          description: Lista de produtos retornada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        "500":
+          description: Erro interno do servidor
+
+    post:
+      tags:
+        - Produto
+      summary: Cadastra um novo produto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        "201":
+          description: Produto criado com sucesso
+        "422":
+          description: Dados inválidos
+        "500":
+          description: Erro ao registrar o produto
+
+  /produtos/{id}:
+    get:
+      tags:
+        - Produto
+      summary: Retorna um produto pelo ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID do produto
+      responses:
+        "200":
+          description: Produto encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "404":
+          description: Produto não encontrado
+        "500":
+          description: Erro interno do servidor
+
+    put:
+      tags:
+        - Produto
+      summary: Atualiza um produto existente
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID do produto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        "201":
+          description: Produto atualizado com sucesso
+        "404":
+          description: Produto não encontrado
+        "422":
+          description: Dados inválidos
+        "500":
+          description: Erro ao atualizar o produto
+
+    delete:
+      tags:
+        - Produto
+      summary: Exclui um produto
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID do produto
+      responses:
+        "200":
+          description: Produto excluído com sucesso
+        "404":
+          description: Produto não encontrado
+        "500":
+          description: Erro interno ao excluir o produto
