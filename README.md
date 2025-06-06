@@ -63,4 +63,4 @@ bash
 ```
 npm start
 ```
-O servidor estará disponível em  ``http://localhost:<PORTA>/``
+* O servidor estará disponível em  ``http://localhost:<PORTA>/``
