@@ -7,7 +7,7 @@ Este projeto consiste no desenvolvimento de uma API RESTful utilizando Node.js e
 
 # Documentação
 
-* A api está documentada com swagger. Para visualizar, é só acessar http://localhost:8080/api-docs/
+* A api está documentada com swagger. Para visualizar, é só acessar http://localhost:<PORTA>/api-docs/
 
 # 🚀 Tecnologias Utilizadas
 
