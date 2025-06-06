@@ -5,7 +5,7 @@ Optei por desenvolver o backend com Node.js e Express, já que é a stack que te
 # 📌 Sobre o Projeto
 Este projeto consiste no desenvolvimento de uma API RESTful utilizando Node.js e Express.js. A API foi projetada para atender aos requisitos do desafio técnico proposto pela Dismoto Honda, focando em boas práticas de desenvolvimento backend.
 
-# Documentação
+# 📚 Documentação
 
 * A api está documentada com swagger. Para visualizar, é só acessar ``http://localhost:<PORTA>/api-docs/``
 
@@ -28,7 +28,7 @@ Este projeto consiste no desenvolvimento de uma API RESTful utilizando Node.js e
 * Node.js instalado na versão mais recente
 * Git instalado
 
-# Passos para executar o projeto
+## Passos para executar o projeto
 1. Clone o repositório:
 
 ```bash
