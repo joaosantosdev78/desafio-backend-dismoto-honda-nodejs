@@ -62,4 +62,7 @@ PORT=8080
 ```bash
 npm start
 ```
-* O servidor estará disponível em  ``http://localhost:<PORTA>/``
+
+> [!IMPORTANT]  
+> Configure a porta do client corretamente no parâmetro origin do cors
+> O servidor estará disponível em  ``http://localhost:<PORTA>/``
