@@ -67,3 +67,5 @@ npm start
 > Configure a porta do client corretamente no parâmetro origin do cors
 > 
 > O servidor estará disponível em  ``http://localhost:<PORTA>/``
+>
+>  Caso queira usar a documentação do swagger, é necessário configurar o endereço do servidor no arquivo swagger.yaml, dentro da pasta docs
